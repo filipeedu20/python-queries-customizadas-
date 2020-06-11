@@ -1,0 +1,47 @@
+
+
+1 - Como organizar modelos em módulos? 
+	O nome de arquivo de módulos deve seguir a convenção: 
+__init__.py, o arquivo deve ficar dentro da pasta models e listar quais serão os modulos utilizados na aplicação 
+
+2 - Como criar modelos com herança? De quais tipos?
+	Cada modelo é um subclasse de django.db.models.Model
+
+
+3 - Como criar Enumeration types e usar como choices?
+O primeiro passo para criar enumeration é importar a classe Enum
+from enum import Enum
+def Color(Enum):
+	RED = 1
+	GREEN = 2
+	BLUE = 3
+
+
+import random 
+from enum import Enum
+class Color(Enum):
+	RED = 1
+	GREEN = 2
+	BLUE = 3
+    
+list1 = ['RED', 'GREEN', 'BLUE']  
+print(random.choice(list1))
+
+4 - No projeto da aula, crie pelo menos quatro queries customizadas. Use as informações em https://docs.djangoproject.com/en/3.0/topics/db/queries/ (Links para um site externo.)
+	
+	Resposta implementada no projeto.
+
+5 - O que é, para quê serve e como usar um Proxy no modelo?
+
+Uma tabela de banco de dados é criado para cada instancia de uma subclasse, onde estes
+dados poderam ser acessadados por pelos itens pai e filho de uma estrutrura de classe. 
+
+6 - O que faz o método __str__() em uma classe?
+
+Serve para retornar um objeto como uma string 
+
+7 - Quais são e para que servem as propriedades adicionais dos tipos de relacionamento/mapeamento?
+
+Many-to-many relationships: Usando quando vários registros de uma tabela são associados a vários registros de utras tabelas 
+Many-to-one relationships: Usado quando varios registros de uma tabela é associado a um único registro de outra tabela
+One-to-one relationships: Usado quando um regitro de uma tabela está associado a apenas um único registro de outra tabela 
